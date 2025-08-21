@@ -53,7 +53,7 @@ hr {
 	.maintenance-page--wrapper {
 		display: flex;
 
-		> * {
+		>* {
 			width: 100%;
 		}
 
@@ -88,18 +88,15 @@ hr {
 			transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 			overflow: auto;
 
-			@media screen and (min-width: $bp-md) {
-				min-height: 100vh;
-			}
+			min-height: 100vh;
 
 			.content--wrapper {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				align-items: center;
 				padding: 5em 0;
-				@media screen and (min-width: $bp-md) {
-					min-height: 100%;
-				}
+				min-height: 100%;
 
 				#logo {
 					display: block;
@@ -109,12 +106,19 @@ hr {
 					object-fit: contain;
 				}
 
-				> *:not(:last-child) {
+				>*:not(:last-child) {
 					margin-bottom: 1.5rem;
+				}
+
+				#slogan {
+					font-size: clamp(28px, 5vw, 35px);
+					max-width: 550px;
+					text-align: center;
+					font-weight: 300;
 				}
 			}
 
-			.contacts > * {
+			.contacts>* {
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;

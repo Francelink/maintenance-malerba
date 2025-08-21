@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .use(i18nextHttpBackend)
         .use(i18nextBrowserLanguageDetector)
         .init({
-            backend: {loadPath: "./config/{{lng}}.json"},
+            backend: { loadPath: "./config/{{lng}}.json" },
             supportedLngs: false,
             load: "languageOnly",
             detection: {
@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const logoEl = document.getElementById('logo');
                     if (logoContainer && logoEl && cfg.logoUrl) {
                         const logoUrl = window.location.href + '/assets/' + cfg.logoUrl;
-                        fetch(logoUrl, {method: 'HEAD'})
+                        fetch(logoUrl, { method: 'HEAD' })
                             .then(response => {
                                 if (response.ok) {
                                     logoEl.src = logoUrl;
@@ -91,16 +91,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
 
                     // 5) gestion image de fond
-                    const imgContainer = document.querySelector('.background');
-                    const mainImg = document.getElementById('mainImg');
-                    if (imgContainer && mainImg && cfg.mainImage) {
+                    const contentDiv = document.querySelector('.content');
+                    if (contentDiv && cfg.mainImage) {
                         const mainImageUrl = window.location.href + '/assets/' + cfg.mainImage;
-                        fetch(mainImageUrl, {method: 'HEAD'})
+                        fetch(mainImageUrl, { method: 'HEAD' })
                             .then(response => {
                                 if (response.ok) {
-                                    mainImg.src = mainImageUrl;
-                                    mainImg.alt = cfg.projectName + ' Background Image';
-                                    imgContainer.style.display = 'block';
+                                    contentDiv.style.backgroundImage = `url('${mainImageUrl}')`;
+                                    contentDiv.style.backgroundSize = 'cover';
+                                    contentDiv.style.backgroundPosition = 'center';
                                     bodyPage.classList.add('has-image');
                                 }
                             })
