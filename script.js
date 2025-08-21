@@ -21,15 +21,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 .then(cfg => {
                     // 1) mettre à jour le <title>
                     const pageTitleEl = document.getElementById('page-title');
-                    if (pageTitleEl && cfg.projectName) pageTitleEl.textContent = `${cfg.projectName} – Maintenance`;
+                    if (pageTitleEl && cfg.projectName) pageTitleEl.innerHTML = `${cfg.projectName} – Maintenance`;
 
 
                     // 2) textes
                     const titleEl = document.getElementById('title');
-                    if (titleEl && i18next.t("mainMessage")) titleEl.textContent = i18next.t("mainMessage");
+                    if (titleEl && i18next.t("mainMessage")) titleEl.innerHTML = i18next.t("mainMessage");
 
                     const slogan = document.getElementById('slogan');
-                    if (slogan && cfg.slogan) slogan.textContent = cfg.slogan;
+                    if (slogan && cfg.slogan) slogan.innerHTML = cfg.slogan;
 
                     const subtitleEl = document.getElementById('subtitle');
                     if (subtitleEl && i18next.t("subMessage")) subtitleEl.innerHTML = i18next.t("subMessage");
@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const logoContainer = document.querySelector('.logo');
                     const logoEl = document.getElementById('logo');
                     if (logoContainer && logoEl && cfg.logoUrl) {
-                        const logoUrl = window.location.href + '/assets/' + cfg.logoUrl;
+                        const logoUrl = window.location.href + 'assets/' + cfg.logoUrl;
                         fetch(logoUrl, { method: 'HEAD' })
                             .then(response => {
                                 if (response.ok) {

@@ -46,14 +46,10 @@ hr {
 	color: var(--text-color);
 	font-family: var(--font-family-base);
 
-	@media screen and (min-width: $bp-md) {
-		overflow: hidden;
-	}
-
 	.maintenance-page--wrapper {
 		display: flex;
 
-		>* {
+		> * {
 			width: 100%;
 		}
 
@@ -88,40 +84,45 @@ hr {
 			transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
 			overflow: auto;
 
-			min-height: 100vh;
-
 			.content--wrapper {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				padding: 5em 0;
-				min-height: 100%;
+				min-height: 100vh;
+
+				.logo {
+					margin-bottom: 3rem !important;
+				}
 
 				#logo {
 					display: block;
 					margin: 0 auto;
-					max-width: 80%;
+					max-width: 100%;
 					max-height: 300px;
 					object-fit: contain;
+					@media screen and (max-width: $bp-md) {
+						max-height: 140px;
+					}
 				}
 
-				>*:not(:last-child) {
+				> *:not(:last-child) {
 					margin-bottom: 1.5rem;
 				}
 
 				#slogan {
-					font-size: clamp(28px, 5vw, 35px);
-					max-width: 550px;
+					font-size: clamp(24px, 3vw, 45px);
 					text-align: center;
 					font-weight: 300;
 				}
-				.title{
+
+				.title {
 					font-size: clamp(20px, 5vw, 28px);
 				}
 			}
 
-			.contacts>* {
+			.contacts > * {
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
@@ -130,18 +131,6 @@ hr {
 				&:not(:last-child) {
 					margin-bottom: 0.5em;
 				}
-			}
-		}
-	}
-
-	&:not(.has-image) .content--wrapper {
-		min-height: 100vh;
-	}
-
-	&.has-image {
-		@media screen and (max-width: $bp-md) {
-			.maintenance-page--wrapper {
-				flex-direction: column;
 			}
 		}
 	}

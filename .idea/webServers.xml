@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c453a833-e2e6-43b2-b504-84b52c327ced" name="MUTU MALERBA" url="http://ftp.MALERBA-VM-2.francelink.fr">
+        <fileTransfer rootFolder="/MalerbaFr" host="ftp.MALERBA-VM-2.francelink.fr" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
