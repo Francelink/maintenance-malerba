@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 order: ["querystring", "navigator"],
                 caches: [] // pas de localStorage
             },
-            fallbackLng: "en",
+            fallbackLng: "fr",
         })
         .then(() => {
             const bodyPage = document.querySelector('.maintenance-page');
@@ -27,6 +27,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     // 2) textes
                     const titleEl = document.getElementById('title');
                     if (titleEl && i18next.t("mainMessage")) titleEl.textContent = i18next.t("mainMessage");
+
+                    const slogan = document.getElementById('slogan');
+                    if (slogan && cfg.slogan) slogan.textContent = cfg.slogan;
 
                     const subtitleEl = document.getElementById('subtitle');
                     if (subtitleEl && i18next.t("subMessage")) subtitleEl.innerHTML = i18next.t("subMessage");

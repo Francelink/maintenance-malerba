@@ -1,11 +1,10 @@
 {
-    "projectName": "Nom du site",
-    "logoUrl": "",
-    "mainImage": "",
+    "projectName": "Malerba",
+    "logoUrl": "LOGO.png",
+    "mainImage": "main.jpg",
+    "slogan": "S’OUVRIR SUR UN MONDE \nDE SOLUTIONS",
     "primaryColor": "#e63946",
     "secondaryColor": "#6c757d",
     "backgroundColor": "#d3d3d3",
-    "textColor": "#000000",
-    "contactEmail": "",
-    "contactPhone": ""
+    "textColor": "#000000"
 }
