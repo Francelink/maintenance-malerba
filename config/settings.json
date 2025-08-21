@@ -1,11 +1,11 @@
 {
     "projectName": "Nom du site",
-    "logoUrl": "logo.svg",
+    "logoUrl": "",
+    "mainImage": "",
     "primaryColor": "#e63946",
     "secondaryColor": "#6c757d",
     "backgroundColor": "#d3d3d3",
     "textColor": "#000000",
-    "mainImage": "main.jpg",
-    "contactEmail": "contact@site.fr",
+    "contactEmail": "",
     "contactPhone": ""
 }

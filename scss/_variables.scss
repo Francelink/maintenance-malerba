@@ -1,8 +1,10 @@
 :root {
-  --font-family-base: 'Open Sans', sans-serif;
-  --primary-color: #e63946;
-  --secondary-color: #8f4242;
-  --text-color: #2a2a2a;
-  --background-color: #ffffff;
-  //--logo-default: '/mon-site/logo-site.svg';
+	--font-family-base: 'Open Sans', sans-serif;
+	--primary-color: #e63946;
+	--secondary-color: #8f4242;
+	--text-color: #2a2a2a;
+	--background-color: #ffffff;
+	//--logo-default: '/mon-site/logo-site.svg';
 }
+
+$bp-md: 1200px;

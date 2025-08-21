@@ -4,13 +4,13 @@ window.addEventListener('DOMContentLoaded', () => {
         .use(i18nextBrowserLanguageDetector)
         .init({
             backend: {loadPath: "./config/{{lng}}.json"},
-            supportedLngs: ["fr", "en"],
+            supportedLngs: false,
             load: "languageOnly",
             detection: {
                 order: ["querystring", "navigator"],
                 caches: [] // pas de localStorage
             },
-            fallbackLng: "fr",
+            fallbackLng: "en",
         })
         .then(() => {
             const bodyPage = document.querySelector('.maintenance-page');
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const logoContainer = document.querySelector('.logo');
                     const logoEl = document.getElementById('logo');
                     if (logoContainer && logoEl && cfg.logoUrl) {
-                        const logoUrl = '/assets/' + cfg.logoUrl;
+                        const logoUrl = window.location.href + '/assets/' + cfg.logoUrl;
                         fetch(logoUrl, {method: 'HEAD'})
                             .then(response => {
                                 if (response.ok) {
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const imgContainer = document.querySelector('.background');
                     const mainImg = document.getElementById('mainImg');
                     if (imgContainer && mainImg && cfg.mainImage) {
-                        const mainImageUrl = '/assets/' + cfg.mainImage;
+                        const mainImageUrl = window.location.href + '/assets/' + cfg.mainImage;
                         fetch(mainImageUrl, {method: 'HEAD'})
                             .then(response => {
                                 if (response.ok) {
